@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>mavendemo</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>mavendemo</name>
+    <url>http://maven.apache.org</url>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- Updated JUnit to a newer version (JUnit 4.12) -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>  <!-- or use 5.x.x for JUnit 5 -->
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Build Section with Maven Compiler Plugin to specify Java version -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version> <!-- You can use a newer version if required -->
+                <configuration>
+                    <source>1.8</source> <!-- Set this to your required Java version, e.g., 11, 17 -->
+                    <target>1.8</target> <!-- Set this to match your Java version -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
